@@ -38,7 +38,4 @@ also, a huge chess enthusiast.
 [![website](https://img.shields.io/badge/-Portfolio-black?style=flat-square&logo=aboutdotme&logoColor=white&link=https://mdeka.vercel.app)](https://mdeka.vercel.app)
 [![Email](https://img.shields.io/badge/-Email-black?style=flat-square&logo=gmail&logoColor=white&link=mailto:dekamaharnavchess@gmail.com)](mailto:dekamaharnavchess@gmail.com)
 
-<!-- Profile Footer -->
-<p align="center">
-  <img src="https://github.com/mdekaa/mdekaa/raw/main/footer.png" alt="Profile Footer Image">
-</p>
+
