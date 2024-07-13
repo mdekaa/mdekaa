@@ -1,0 +1,40 @@
+name: Update README with Private Repo Stats
+
+on:
+  schedule:
+    # Runs at 12:00 PM UTC every day
+    - cron: '0 12 * * *'
+  push:
+    branches:
+      - main
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Generate GitHub Stats
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          curl -H "Authorization: token $GITHUB_TOKEN" -H "Accept: application/vnd.github.v3+json" https://api.github.com/user/repos\?visibility\=private > repos.json
+          PRIVATE_REPO_STATS=$(jq '[.[] | {name, stargazers_count, forks_count}]' repos.json)
+          echo "PRIVATE_REPO_STATS=\${PRIVATE_REPO_STATS}" >> $GITHUB_ENV
+
+      - name: Update README
+        run: |
+          STATS_MARKDOWN=$(echo -e "### Private Repositories Stats\n\n")
+          for repo in $(echo "${PRIVATE_REPO_STATS}" | jq -c '.[]'); do
+            name=$(echo "${repo}" | jq -r '.name')
+            stars=$(echo "${repo}" | jq -r '.stargazers_count')
+            forks=$(echo "${repo}" | jq -r '.forks_count')
+            STATS_MARKDOWN+=$(echo -e "- **${name}**: 🌟 ${stars} | 🍴 ${forks}\n")
+          done
+          sed -i '/### Private Repositories Stats/,/<!--END:PRIVATE_REPO_STATS-->/c\'"$(echo -e "${STATS_MARKDOWN}\n<!--END:PRIVATE_REPO_STATS-->")" README.md
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "Update private repo stats"
+          git push
