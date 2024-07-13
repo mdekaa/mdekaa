@@ -1,7 +1,3 @@
-<!-- Profile Header -->
-<p align="center">
-  <img src="https://avatars.githubusercontent.com/u/121357154?v=4" alt="Profile Header Image">
-</p>
 
 
 
