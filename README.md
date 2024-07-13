@@ -3,15 +3,13 @@
   <img src="https://avatars.githubusercontent.com/u/121357154?v=4" alt="Profile Header Image">
 </p>
 
-<!-- Profile Views Counter -->
-<p align="center"> 
-  <img src="https://komarev.com/ghpvc/?username=mdekaa&label=Profile%20views&color=0e75b6&style=flat" alt="mdekaa" />
-</p>
+
 
 <!-- Introduction -->
 ##  hey, i'm maharnav
 
 i'm an aspiring software engineer with a passion for developing innovative web applications and learning new tech everyday.
+also, a huge chess enthusiast.
 
 <!-- About Me -->
 ### 📌 current status
