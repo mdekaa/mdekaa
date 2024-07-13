@@ -1,6 +1,6 @@
 <!-- Profile Header -->
 <p align="center">
-  <img src="https://github.com/mdekaa/mdekaa/raw/main/header.png" alt="Profile Header Image">
+  <img src="https://avatars.githubusercontent.com/u/121357154?v=4" alt="Profile Header Image">
 </p>
 
 <!-- Profile Views Counter -->
