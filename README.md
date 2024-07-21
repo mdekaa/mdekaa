@@ -4,7 +4,7 @@
 <!-- Introduction -->
 ##  hey, i'm maharnav
 
-i'm an aspiring software engineer with a passion for developing innovative web applications and learning new tech everyday.
+software dev with a passion for developing innovative web applications and learning new tech everyday.
 also, a huge chess enthusiast.
 
 <!-- About Me -->
