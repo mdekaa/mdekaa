@@ -2,7 +2,7 @@
 
 
 <!-- Introduction -->
-##  hey, i'm maharnav
+##  hi i'm maharnav
 
 software dev with a passion for developing innovative web applications and learning new tech everyday.
 also, a huge chess enthusiast.
